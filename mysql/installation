@@ -1,0 +1,39 @@
+1) brew install mysql
+2) vi my.conf   (you can put it in the /etc/my.conf or /usr/local/etc/my.conf)
+content :
+---
+[client]
+port = 3306
+socket = /tmp/mysql.sock
+default-character-set = utf8
+
+[mysqld]
+collation-server = utf8_unicode_ci
+character-set-server = utf8
+init-connect ='SET NAMES utf8'
+max_allowed_packet = 64M
+bind-address = 127.0.0.1
+port = 3306
+socket = /tmp/mysql.sock
+
+---
+
+3)unset TMPDIR
+4) mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+5)cd /usr/local/opt/mysql ; /usr/local/opt/mysql/bin/mysqld_safe &
+
+6) set the root  password
+/usr/local/opt/mysql/bin/mysqladmin -u root password 'new-password'
+OR
+/usr/local/opt/mysql/bin/mysqladmin -u root -h outekiMacBook-Pro.local password 'new-password'
+
+7) To have launchd start mysql at login:
+    ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+Then to load mysql now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+Or, if you don't want/need launchctl, you can just run:
+    mysql.server start
+
+8)connect  mysql
+mysql -u root -p  
