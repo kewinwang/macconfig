@@ -1,3 +1,3 @@
-Here is my personal mac machine configration list and content .
+Here is my personal mac machine configration and learning notes.
 
 
