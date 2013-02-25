@@ -1,0 +1,14 @@
+brew install rbenv 
+brew install ruby-build
+
+#  update
+brew upgrade rbenv
+
+# a must .  ruby-build definition the ruby versions
+brew upgrade ruby-build
+# list all the ruby-build ruby versions definitions
+rbenv install -l 
+# rbenv install 2.0.0-p0  
+
+
+

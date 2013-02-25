@@ -1,3 +1,5 @@
+# The Mysql installation tips:
+
 1) brew install mysql
 2) vi my.conf   (you can put it in the /etc/my.conf or /usr/local/etc/my.conf)
 content :
