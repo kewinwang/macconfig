@@ -1,0 +1,28 @@
+➜  ~  brew install openssl
+==> Downloading http://openssl.org/source/openssl-1.0.1e.tar.gz
+######################################################################## 100.0%
+==> perl ./Configure --prefix=/usr/local/Cellar/openssl/1.0.1e --openssldir=/usr/local/etc/openssl zlib-dynamic shared darwin64-x86_64-cc
+==> make
+==> make test
+==> make install MANDIR=/usr/local/Cellar/openssl/1.0.1e/share/man MANSUFFIX=ssl
+==> Caveats
+To install updated CA certs from Mozilla.org:
+
+    brew install curl-ca-bundle
+
+This formula is keg-only: so it was not symlinked into /usr/local.
+
+Mac OS X already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+The OpenSSL provided by OS X is too old for some software.
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/openssl/lib
+    CPPFLAGS: -I/usr/local/opt/openssl/include
+
+==> Summary
+🍺  /usr/local/Cellar/openssl/1.0.1e: 429 files, 15M, built in 3.6 minutes
