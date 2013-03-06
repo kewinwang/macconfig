@@ -1,11 +1,14 @@
 # On Mac OX ML,   use brew  and  rbenv to setup ruby 2.0 
+##
+## [] homebrew ,rbenv and git  are required 
+
 brew install rbenv 
 brew install ruby-build
 
-#  update
+###  update
 brew upgrade rbenv
 
-# a must .  ruby-build definition the ruby versions
+### a must .  ruby-build definition the ruby versions
 brew upgrade ruby-build
 # list all the ruby-build ruby versions definitions
 rbenv install -l 
@@ -14,7 +17,7 @@ rbenv install -l
    ~  export CC=clang
 ➜  ~  rbenv install 2.0.0-p0
 
-##### on Mac OX and use rbenv to install  ruby 1.9.3,  use gcc to build
+## on Mac OX and use rbenv to install  ruby 1.9.3,  use gcc to build
 
  export  CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl` --with-readline-dir=`brew --prefix readline`"
  export CC=gcc 
