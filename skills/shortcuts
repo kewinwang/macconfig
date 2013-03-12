@@ -11,4 +11,7 @@ Home is Fn ←
 End is Fn →
 Page Up is Fn ↑
 Page Down is Fn ↓
+8)
+按住 “option” 键，再按 “delete”，你会发现 Mac 自动删除了光标前的一句话或一整个单词，很方便吧。估计苹果是通过空格和标点符号以及中/英文/数字变化来自动识别句子和单词的。另外，按住 “command” 键再按 “delete”，会删除一整行文字。
+苹果电脑上向光标后方删除（就像 PC 上的 delete），是按住 fn，再按 delete
 
